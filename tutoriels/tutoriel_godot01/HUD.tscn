@@ -39,6 +39,7 @@ margin_right = 196.5
 margin_bottom = 39.0
 custom_fonts/font = SubResource( 2 )
 text = "Prépare-toi!"
+align = 1
 
 [node name="StartButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -55,3 +56,5 @@ text = "J'y vais!"
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
